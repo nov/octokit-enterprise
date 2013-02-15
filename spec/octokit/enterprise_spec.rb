@@ -5,10 +5,12 @@ describe Octokit::Enterprise do
     let(:base_hostname) { 'git.enterprise.example.com' }
 
     before do
-      Octokit::Enterprise.hostname = base_hostname
+      Octokit::Enterprise.configure do |c|
+        c.hostname = base_hostname
+      end
     end
 
-    Octokit::Enterprise::CUSTOM_ENDPOINTS.each do |endpoint|
+    Octokit::Enterprise::Configuration::CUSTOM_ENDPOINTS.each do |endpoint|
       context endpoint do
         let(:expected_hostname) do
           case endpoint
