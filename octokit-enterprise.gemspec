@@ -5,8 +5,8 @@ Gem::Specification.new do |gem|
   gem.version       = File.read('VERSION')
   gem.authors       = ["nov"]
   gem.email         = ["nov.matake@gree.net"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Octokit for GitHub Enterprise}
+  gem.summary       = %q{Octokit for GitHub Enterprise}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
